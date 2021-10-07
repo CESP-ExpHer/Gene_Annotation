@@ -1,7 +1,7 @@
 # Creation of the annotation files for for hg19 genome assembly
 Created by: Yazdan Asgari<br>
-First creation date: 7 May 2021<br>
-Last Updated: 7 Oct 2021<br><br>
+Creation date: 7 May 2021<br>
+Update: 7 Oct 2021<br><br>
 
 ## Table of Contents
 - [Creation of the annotation files for for hg19 genome assembly](#creation-of-the-annotation-files-for-for-hg19-genome-assembly)
