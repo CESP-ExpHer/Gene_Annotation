@@ -5,6 +5,7 @@ Last Updated: 7 Oct 2021<br><br>
 
 **NOTE:** You could find all downloaded annotation files (explained in this section) in the **"2_Gene_annotation"** folder on the server.
 
+## Table of Contents
 - [Analysis of the downloaded annotation files for for hg19 genome assembly](#analysis-of-the-downloaded-annotation-files-for-for-hg19-genome-assembly)
   * [Comparing the Files](#comparing-the-files)
     + [PE and NCBI](#pe-and-ncbi)
