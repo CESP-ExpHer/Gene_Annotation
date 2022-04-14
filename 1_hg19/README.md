@@ -13,12 +13,12 @@ Finally, we performesd some cleaning on a selected annotation file in order to b
 
 ## How to annotate your SNPs list with an annotation file
 There are various scenarios to do that, but here we provide three of them in summary.
-- Writing a programming script
+### 1- Writing a programming script
 Suppose you have a list of SNPs (which contains chromosomes and positions columns as well). NOw, you could write a script (for example in R or Python, etc.) to compare every SNP with any gene in the annotation file (its chr, start, and end base pair position) to check if the SNP lie inside the gene or not.<br><br>
 **NOTE 1:** You could consider a specific distance in upstream or downstream of a gene (for instance +/-10Kb) by taking into account this distance into start/end position of the gene.<br><br>
 **NOTE 2:** Because there is biologically possible the genes to have overlaps, you should expect some SNPs might mapped to more than one gene and you should consider in your script how they would be stored in the output file in order to work with them easily in the future.
 
-- Using PLINK
+### 2- Using PLINK
 You could use **PLINK** tool in order to annotate your SNPs list [Plink web page](https://zzz.bwh.harvard.edu/plink/annot.shtml)
 Here, we provide you a summary. Assume you have a SNPs list file called ***GWAS.txt***.<br>
 This file could be used as an input for Plink annotation process.<br>
@@ -54,5 +54,5 @@ Here is some lines of the annotation output:<br>
 **Note 1:** 
 
 
-- Using ANNOVAR
+### 3- Using ANNOVAR
 
