@@ -37,7 +37,7 @@ plink --annotate GWAS.assoc attrib=snp129.attrib.gz ranges=annotation_hg19.txt
 ```
 **Note 1:** All files should be in the same folder.<br><br>
 **Note 2:** To specify a particular distance for genes/ranges (i.e. upstream/downstream of a gene), 
-use the following command, e.g. for for 1000 bp (1kb) upstream and downstream
+use the following command, e.g. for for 1000 bp (1Kb) upstream and downstream
 ```
 plink --annotate GWAS.assoc attrib=snp129.attrib.gz ranges=annotation_hg19.txt --border 1
 ```
@@ -50,9 +50,8 @@ Here is some lines of the annotation output:<br>
 |  12  | rs3024971 | 57493727 | 1E-9 | 'CATG00000009161.1'(0)\|'STAT6'(0) |
 
 **Note 1:** Always check that the line numbers of this file should be the same as the ***GWAS.assoc*** line numbers.<br><br>
-**Note 1:** 
-**Note 1:** 
-
+**Note 2:** The value in the parenthesis show if a SNP lie inside a gene (0) or outside of it (non-zero).<br><br>
+**Note 3:** If a SNP overlapped with more than one gene, they separated by "|" character.
 
 ### 3- Using ANNOVAR
 
