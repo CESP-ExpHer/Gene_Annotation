@@ -54,4 +54,6 @@ Here is some lines of the annotation output:<br>
 **Note 5:** If a SNP overlapped with more than one gene, they separated by "|" character.
 
 ### 3- Using ANNOVAR
+You could use "ANNOVAR" tool to annotate a list of SNPs. It gives you multiple output files including annotation for each SNP, detailed information for exonic SNPs, if a SNP got error during the annotation process, and a log file. <br>
+You could find how to use this tool in our GitHub page [ANNOVAR GitHUb Page](/../../Tutorial_ANNOVAR)
 
