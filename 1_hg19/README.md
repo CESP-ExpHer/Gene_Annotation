@@ -19,7 +19,7 @@ Suppose you have a list of SNPs (which contains chromosomes and positions column
 **NOTE 2:** Because there is biologically possible the genes to have overlaps, you should expect some SNPs might mapped to more than one gene and you should consider in your script how they would be stored in the output file in order to work with them easily in the future.
 
 ### Using PLINK
-You could use **PLINK** tool in order to annotate your SNPs list [Plink web page] (https://zzz.bwh.harvard.edu/plink/annot.shtml)
+You could use **PLINK** tool in order to annotate your SNPs list [Plink web page](https://zzz.bwh.harvard.edu/plink/annot.shtml)
 Here, we provide you a summary. Assume you have a SNPs list file called ***GWAS.txt***.<br>
 This file could be used as an input for Plink annotation process.<br>
 So, prepare a file called ***GWAS.assoc*** with the following four columns:<br>
