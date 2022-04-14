@@ -13,11 +13,46 @@ Finally, we performesd some cleaning on a selected annotation file in order to b
 
 ## How to annotate your SNPs list with an annotation file
 There are various scenarios to do that, but here we provide three of them in summary.
-### Writing programming script
+### Writing a programming script
 Suppose you have a list of SNPs (which contains chromosomes and positions columns as well). NOw, you could write a script (for example in R or Python, etc.) to compare every SNP with any gene in the annotation file (its chr, start, and end base pair position) to check if the SNP lie inside the gene or not.<br><br>
 **NOTE 1:** You could consider a specific distance in upstream or downstream of a gene (for instance +/-10Kb) by taking into account this distance into start/end position of the gene.<br><br>
 **NOTE 2:** Because there is biologically possible the genes to have overlaps, you should expect some SNPs might mapped to more than one gene and you should consider in your script how they would be stored in the output file in order to work with them easily in the future.
+
 ### Using PLINK
+You could use **PLINK** tool in order to annotate your SNPs list (Plink web page) [https://zzz.bwh.harvard.edu/plink/annot.shtml]
+Here, we provide you a summary. Assume you have a SNPs list file called ***GWAS.txt***.<br>
+This file could be used as an input for Plink annotation process.<br>
+So, prepare a file called ***GWAS.assoc*** with the following four columns:<br>
+ | CHR | SNP | BP | P |
+ | --- | ---------- | ---------- | ---------- |
+ |  11  | rs2212434  | 76281593 | 1E-10 |
+ |  11  | rs61893460 | 76291154 | 1E-9 |
+
+And put that file in the [***0_input_GWAS_Plink/Plink***](/0_input_GWAS_Plink/Plink/) folder.<br>
+It is also needed to put an annotation list file that you prepared before (as we talked about it earlier in this page) (suppose we called it ***annotation_hg19.txt***). <br>
+Another file called ***snp129.attrib*** is needed for the annotation. <br>
+You could download it directly from the [Plink web page](https://zzz.bwh.harvard.edu/plink/res.shtml#attrib).<br>
+Then, all you need is to run the following command for annotation of the GWAS file:<br>
+```
+plink --annotate GWAS.assoc attrib=snp129.attrib.gz ranges=annotation_hg19.txt
+```
+**Note:** To specify a particular distance for genes/ranges (i.e. upstream/downstream of a gene), 
+use the following command, e.g. for for 1000 bp (1kb) upstream and downstream
+```
+plink --annotate GWAS.assoc attrib=snp129.attrib.gz ranges=annotation_hg19.txt --border 1
+```
+After running, an output called ***plink.annot*** would be created. <br>
+Here is some lines of the annotation output:<br>
+| CHR | SNP | BP | P | ANNOT |
+| --- | ---------- | ---------- | ---------- | ---------- |
+|  11  | rs2212434  | 76281593 | 1E-9 | . |
+|  11  | rs7931483 | 76302067 | 1E-9 | 'RP11-672A2.7'(0) |
+|  12  | rs3024971 | 57493727 | 1E-9 | 'CATG00000009161.1'(0)\|'STAT6'(0) |
+
+**Note 1:** Always check that the line numbers of this file should be the same as the ***GWAS.assoc*** line numbers.<br><br>
+**Note 1:** 
+**Note 1:** 
+
 
 ### Using ANNOVAR
 
