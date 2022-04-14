@@ -49,9 +49,9 @@ Here is some lines of the annotation output:<br>
 |  11  | rs7931483 | 76302067 | 1E-9 | 'RP11-672A2.7'(0) |
 |  12  | rs3024971 | 57493727 | 1E-9 | 'CATG00000009161.1'(0)\|'STAT6'(0) |
 
-**Note 1:** Always check that the line numbers of this file should be the same as the ***GWAS.assoc*** line numbers.<br><br>
-**Note 2:** The value in the parenthesis show if a SNP lie inside a gene (0) or outside of it (non-zero).<br><br>
-**Note 3:** If a SNP overlapped with more than one gene, they separated by "|" character.
+**Note 3:** Always check that the line numbers of this file should be the same as the ***GWAS.assoc*** line numbers.<br><br>
+**Note 4:** The value in the parenthesis show if a SNP lie inside a gene (0) or outside of it (non-zero).<br><br>
+**Note 5:** If a SNP overlapped with more than one gene, they separated by "|" character.
 
 ### 3- Using ANNOVAR
 
