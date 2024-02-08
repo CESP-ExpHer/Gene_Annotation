@@ -1,12 +1,12 @@
-# Analysis of the downloaded annotation files for for hg19 genome assembly
+# Analysis of the downloaded annotation files for hg19 genome assembly
 Created by: Yazdan Asgari<br>
 Creation date: 7 May 2021<br>
-Update: 7 Oct 2021<br><br>
+Update: 8 Feb 2024<br><br>
 
 **NOTE:** You could find all downloaded annotation files (explained in this section) in the **"2_Gene_annotation"** folder on the server.
 
 ## Table of Contents
-- [Analysis of the downloaded annotation files for for hg19 genome assembly](#analysis-of-the-downloaded-annotation-files-for-for-hg19-genome-assembly)
+- [Analysis of the downloaded annotation files for hg19 genome assembly](#analysis-of-the-downloaded-annotation-files-for-hg19-genome-assembly)
   * [Comparing the Files](#comparing-the-files)
     + [PE and NCBI](#pe-and-ncbi)
     + [GENCODE and GENCODE superset](#gencode-and-gencode-superset)
@@ -23,7 +23,7 @@ Update: 7 Oct 2021<br><br>
 
 ## Comparing the Files
 ### PE and NCBI
-First, we compared the file in the server with NCBI file:
+First, we compared the file in the server with the NCBI file:
 <br></br>
 <kbd> <img src="0_Images/Slide43.PNG"/> </kbd>
 <br></br>
@@ -31,7 +31,7 @@ Based on the header of these two files, it seems they should be very similar to 
 <br></br>
 <kbd> <img src="0_Images/Slide44.PNG"/> </kbd>
 <br></br>
-As you can see in the picture, PE and NCBI protein_coding genes are ~ 92% similarity (using unique gene_name).<br> 
+As you can see in the picture, PE and NCBI protein-coding genes are ~ 92% similar (using unique gene_name).<br> 
 For re-running the results, perform **#1** in the [R code](code_annotation_hg19.R).
 <br></br>
 <kbd> <img src="0_Images/Slide45.PNG"/> </kbd>
@@ -55,7 +55,7 @@ Then, we compared two files related to the Biomart tool:
 <br></br>
 <kbd> <img src="0_Images/Slide49.PNG"/> </kbd>
 <br></br>
-As you can see in the picture, two files are exactly similar.<br> 
+As you can see in the picture, the two files are exactly similar.<br> 
 For re-running the results, perform **#3** in the [R code](code_annotation_hg19.R).
 <br></br>
 <kbd> <img src="0_Images/Slide50.PNG"/> </kbd>
@@ -65,7 +65,7 @@ So, it is possible to just consider the **Biomart** file for further analysis.
 <kbd> <img src="0_Images/Slide51.PNG"/> </kbd>
 <br></br>
 ### GENCODE superset and ENSEMBL and Biomart and the paper files
-Then, we compared four files (GENCODE_superset, ENSEMBL, Biomart, and file used in the paper):
+Then, we compared four files (GENCODE_superset, ENSEMBL, Biomart, and the file used in the paper):
 <br></br>
 <kbd> <img src="0_Images/Slide52.PNG"/> </kbd>
 <br></br>
@@ -80,8 +80,8 @@ So, it is possible to just ignore the **ENSEMBL** file for further analysis.
 <br></br>
 ### GENCODE superset and Biomart and the paper file and file in the Server and NCBI files
 Then, we compared five files in two different four groups:<br>
-GENCODE_superset, Biomart, file used in the paper, file available in the Server.<br>
-GENCODE_superset, Biomart, file used in the paper, NCBI files.
+GENCODE_superset, Biomart, the file used in the paper, file available in the Server.<br>
+GENCODE_superset, Biomart, the file used in the paper, NCBI files.
 <br></br>
 <kbd> <img src="0_Images/Slide55.PNG"/> </kbd>
 <br></br>
@@ -93,9 +93,9 @@ For re-running the results, perform **#5 & #6** in the [R code](code_annotation_
 <br></br>
 ### GENCODE superset and Biomart and the paper file and file in the Server and NCBI file and FANTOM files
 Then, we compared six files in three different four groups:
-GENCODE_superset, Biomart, file used in the paper, file available in the Server.<br>
-GENCODE_superset, Biomart, file used in the paper, NCBI files.<br>
-GENCODE_superset, Biomart, file used in the paper, FANTOM.
+GENCODE_superset, Biomart, the file used in the paper, file available in the Server.<br>
+GENCODE_superset, Biomart, the file used in the paper, NCBI files.<br>
+GENCODE_superset, Biomart, the file used in the paper, FANTOM.
 <br></br>
 <kbd> <img src="0_Images/Slide57.PNG"/> </kbd>
 <br></br>
@@ -109,15 +109,15 @@ So, here we talk about *how to build an annotation file for protein_coding genes
 <br></br>
 <kbd> <img src="0_Images/Slide60.PNG"/> </kbd>
 <br></br>
-It should be mentioned that, biologically speaking, the annotation file must be similar to the reference genome that a GWAS data has been derived from.
+It should be mentioned that biologically speaking, the annotation file must be similar to the reference genome that GWAS data has been derived from.
 <br></br>
 <kbd> <img src="0_Images/Slide61.PNG"/> </kbd>
 <br></br>
-However, in our situation, we could devide our data into four category:
+However, in our situation, we could divide our data into four categories:
 <br></br>
 <kbd> <img src="0_Images/Slide62.PNG"/> </kbd>
 <br></br>
-Here are some suggestions for creation of an annotation file:
+Here are some suggestions for the creation of an annotation file:
 Consider union of 5 files (GENCODE_superset, Biomart-ENSEMBL, Paper-EBI_GENCODE, PE, NCBI)
 <br></br>
 <kbd> <img src="0_Images/Slide63.PNG"/> </kbd>
@@ -127,7 +127,7 @@ For re-running the results, perform **#8** in the [R code](code_annotation_hg19.
 <br></br>
 <kbd> <img src="0_Images/Slide64.PNG"/> </kbd>
 <br></br>
-Here are another suggestions for creation of an annotation file:<br>
+Here are other suggestions for the creation of an annotation file:<br>
 Consider union of similar databases files<br> 
 GENCODE_superset, Biomart-ENSEMBL, Paper-EBI_GENCODE together<br>
 OR<br>
@@ -145,7 +145,7 @@ For re-running the results, perform **#11** in the [R code](code_annotation_hg19
 <br></br>
 <kbd> <img src="0_Images/Slide67.PNG"/> </kbd>
 <br></br>
-Here is another suggestion for creation of an annotation file:<br>
+Here is another suggestion for the creation of an annotation file:<br>
 Consider union of all databases files<br> 
 GENCODE_superset, Biomart-ENSEMBL, Paper-EBI_GENCODE, PE, NCBI, FANTOM<br>
 **NOTE:** UCSC does NOT have Gene_class.
@@ -164,23 +164,23 @@ Should we prioritize databases or keep all tag information?
 <br></br>
 
 ## Summary of Analyses
-We have analyzed 10 different downloaded annotation files for Protein_coding category.
+We have analyzed 10 different downloaded annotation files for the Protein_coding category.
 <br></br>
 <kbd> <img src="0_Images/Slide79.PNG"/> </kbd>
 <br></br>
-Here is the summary of the work, questions, qnd challenges that remains to be recovered for building a final annotation file.
+Here is the summary of the work, questions, and challenges that remain to be recovered for building a final annotation file.
 <br></br>
 <kbd> <img src="0_Images/Slide80.PNG"/> </kbd>
 <br></br>
 
 # Selection of the Annotation file
-**Selection:** After careful dealing with the results, and considering the fact that we should regularly update the annotation file on the case of any new releases, we decided to chose the file from the GENCODE database. So, we selected the file contains the the comprehensive gene annotation **originally created on the GRCh38 reference chromosomes, mapped to the GRCh37 primary assembly with gencode-backmap** (which is similar to the file used in the paper "*gencode.v28lift37.annotation.gft*").<br><br>
+**Selection:** After carefully dealing with the results, and considering the fact that we should regularly update the annotation file in the case of any new releases, we decided to choose the file from the GENCODE database. So, we selected the file containing the comprehensive gene annotation **originally created on the GRCh38 reference chromosomes, mapped to the GRCh37 primary assembly with gencode-backmap** (which is similar to the file used in the paper "*gencode.v28lift37.annotation.gft*").<br><br>
 We downloaded the latest version of the file called "*latest_gencode.v38lift37.annotation.gtf*". (We rename the file into "**REMAP_latest_gencode.v38lift37.annotation.gtf**" in order to remember it is remapped from hg38 into hg19 assembly.<br><br> 
-Here, we perfomed some analyses on the "**REMAP_latest_gencode.v38lift37.annotation.gtf**" file:
+Here, we performed some analyses on the "**REMAP_latest_gencode.v38lift37.annotation.gtf**" file:
 <br>
 
 ## Analyses on the inflammation pathway-related genes
-In this section, we tested whether the Inflammatory pathways-related genes exists in the annotation files or not.
+In this section, we tested whether the Inflammatory pathways-related genes exist in the annotation files or not.
 <br>
 The gene list is based on the [**Supplementary file S1**](2007_loza_S1.xls) of the following paper:
 *Assembly of Inflammation-Related Genes for Pathway-Focused Genetic Analysis*
@@ -195,15 +195,15 @@ If you see the Excel file, there are **1027** Inflammation-Related Genes.
 1- Finding the total number of Inflammation-Related Genes in the GENCODE annotation file<br>
 For the R program, see the *# 1- coding_gencode* section in the [code_inflame](code_inflame.R)<br><br>
 
-**NOTE:** If you see the fourth column from the left (**Not_found**) for the first row, you see that 70 genes out of 1027 Inflammation-Related Genes did not find within the protein_coding genes of the GENCODE database. Is it true? To check that, we put all 1027 Inflammation-Related Genes into the HGNC web page to find the **Approved Gene Symbol** for each genes.
+**NOTE:** If you see the fourth column from the left (**Not_found**) for the first row, you see that 70 genes out of 1027 Inflammation-Related Genes were not found within the protein_coding genes of the GENCODE database. Is it true? To check that, we put all 1027 Inflammation-Related Genes into the HGNC web page to find the **Approved Gene Symbol** for each gene.
 <br>
 To do that, first, go to the following web page:<br>
 [https://www.genenames.org/tools/multi-symbol-checker/](https://www.genenames.org/tools/multi-symbol-checker/)<br>
-Then, paste the input genes into the box, then, click *"submut"*. When the results appeare, click on *"CSV download"*.<br>
-Then, we removed the duplicates gene names by comparing them with the **Supplementary file S1** of the paper (by looking at the chromosome locations).<br>
-Therefore, we made a new Inflammation-Related Genes list which we called it **"Pathways_genes_hgnc_input.csv"**.<br>
-So, there are two parts for each rows in the following Results Table: One with comparing to the Inflammation-Related Genes symbols available in the published paper and Another one with comparing to the **"Pathways_genes_hgnc_input.csv"** file (which we built from the HGNC web page and manually corrected them).<br>
-**NOTE:** To understand what we mean by "manually corrected" the results, you could see this two files as examples ([Example_1](0_Images/example1.PNG) AND [Example_2](0_Images/example2.PNG))
+Then, paste the input genes into the box, then, click *"submut"*. When the results appear, click on *"CSV download"*.<br>
+Then, we removed the duplicate gene names by comparing them with the **Supplementary file S1** of the paper (by looking at the chromosome locations).<br>
+Therefore, we made a new Inflammation-Related Genes list which we called **"Pathways_genes_hgnc_input.csv"**.<br>
+So, there are two parts for each row in the following Results Table: One comparing to the Inflammation-Related Genes symbols available in the published paper and Another one comparing to the **"Pathways_genes_hgnc_input.csv"** file (which we built from the HGNC web page and manually corrected them).<br>
+**NOTE:** To understand what we mean by "manually corrected" the results, you could see these two files as examples ([Example_1](0_Images/example1.PNG) AND [Example_2](0_Images/example2.PNG))
 <br>
 <br>
 2- Finding the total number of Inflammation-Related Genes in the GENCODE superset annotation file<br>
@@ -259,7 +259,7 @@ Total number of **protein_coding** genes = **20,082**<br>
 Total number of unique protein_coding genes (JUST by looking at gene name) = 20,056 <br>
 Total number of unique protein_coding genes (by looking at **gene name & chromosome**) = **20,075**<br>
 
-When reading the file in R, there are several culumns which you could find their meanings by looking at the following link provided by the GENCODE database:
+When reading the file in R, there are several columns which you could find their meanings by looking at the following link provided by the GENCODE database:
 <br>
 [https://www.gencodegenes.org/pages/data_format.html](https://www.gencodegenes.org/pages/data_format.html)
 <br>
@@ -271,7 +271,7 @@ Here, we mention some important definitions:
 <br><br>
 **What do "HAVANA" and "ENSEMBL" mean in the GTF/GFF3?**
 <br>
-The second field in the GTF/GFF3 files shows the annotation source for each feature. The HAVANA team have relocated from the Wellcome Trust Sanger Institute to the EMBL-EBI to join the Ensembl team and as such the terms "HAVANA" and "ENSEMBL" are anachronistic in this context. However, in the files "HAVANA" indicates that the feature was manually annotated, although it may also be the product of the merge between Havana manual annotation and Ensembl-genebuild automated annotation. "ENSEMBL" refers exclusively to annotation provided by the automated Ensembl-genebuild pipeline.
+The second field in the GTF/GFF3 files shows the annotation source for each feature. The HAVANA team has relocated from the Wellcome Trust Sanger Institute to the EMBL-EBI to join the Ensembl team and as such the terms "HAVANA" and "ENSEMBL" are anachronistic in this context. However, in the file "HAVANA" indicates that the feature was manually annotated, although it may also be the product of the merge between Havana manual annotation and Ensembl-gene-build automated annotation. "ENSEMBL" refers exclusively to annotation provided by the automated Ensembl-genebuild pipeline.
 <br>
 <br>
 **What does level 1, 2 or 3 mean in the GTF/GFF3?**
@@ -280,7 +280,7 @@ They supply genome-wide features on three different confidence levels:
 <br>
 *Level 1 - validated*
 <br>
-Pseudogene loci that were jointly predicted by the Yale Pseudopipe and UCSC Retrofinder pipelines as well as by Havana manual annotation; other transcripts that were verified experimentally by RT-PCR and sequencing through the GENCODE experimental pipeline.
+Pseudogene loci were jointly predicted by the Yale Pseudopipe and UCSC Retrofinder pipelines as well as by Havana manual annotation; other transcripts were verified experimentally by RT-PCR and sequencing through the GENCODE experimental pipeline.
 <br>
 *Level 2 - manual annotation*
 <br>
@@ -295,12 +295,12 @@ Please note that not all transcripts have been tested by the GENCODE experimenta
 <br>
 ***What is the gene/transcript status in the GTF/GFF3?***
 <br>
-The gene_status and transcript_status fields were removed after releases 25 and M11 because they no longer served their original purpose. The KNOWN status indicates that the gene has cross references to curated cDNA and/or protein resources, so it could be used to distinguish well supported annotation. However, the vast majority of GENCODE genes are now supported by RefSeq cDNAs or UniProt proteins. In fact, releases 25 and M11 had over 96% and 99% of KNOWN genes, respectively. There are other fields in the GTF file that can be used to find well-supported annotation at the transcript level, such as the transcript_support_level.
+The gene_status and transcript_status fields were removed after releases 25 and M11 because they no longer served their original purpose. The KNOWN status indicates that the gene has cross references to curated cDNA and/or protein resources, so it could be used to distinguish well-supported annotation. However, the vast majority of GENCODE genes are now supported by RefSeq cDNAs or UniProt proteins. In fact, releases 25 and M11 had over 96% and 99% of KNOWN genes, respectively. There are other fields in the GTF file that can be used to find well-supported annotation at the transcript level, such as the transcript_support_level.
 <br>
 Prior to release 25/M11 the status indicated the type of evidence supporting the annotation.
 <br>
 *KNOWN:*<br>
-Identical to known cDNAs or proteins from the same species and has an entry in species specific model databases: EntrezGene for human.
+Identical to known cDNAs or proteins from the same species and has an entry in species-specific model databases: EntrezGene for humans.
 <br>
 *NOVEL:*<br>
 Identical or homologous to cDNAs from the same species, or proteins from all species.
@@ -315,6 +315,6 @@ Based on a known orthologue gene in another species.
 **NOTE:** We have also checked two different files (*"Comprehensive gene annotation"* and *"Basic gene annotation"*) available for the latest version of the GENCODE annotation  (*"gencode.v38lift37.annotation"* and *"gencode.v38lift37.basic.annotation"*). Both files have the same number of genes. So, we picked the Comprehensive file for the annotation (*"gencode.v38lift37.annotation"*).
 
 ## Non-coding annotation file
-*Currently, our group just works with an annotation data including coding-genes or all genes. So, creation of an annotation file including just non-coding genes will be covered if it is needed in the future.*
+*Currently, our group just works with annotation data including coding genes or all genes. So, the creation of an annotation file including just non-coding genes will be covered if it is needed in the future.*
 
-In the [Creation of the annotation file Section](../2_Creation_annot_file), we deal with pre_processing of the selected file to created different annotation files based on the original file.
+In the [Creation of the annotation file Section](../2_Creation_annot_file), we deal with pre_processing of the selected file to create different annotation files based on the original file.
