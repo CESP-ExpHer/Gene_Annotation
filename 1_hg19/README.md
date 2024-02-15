@@ -1,7 +1,7 @@
 # GRCh37 (hg19) Annotation 
 Created by: Yazdan Asgari<br>
 Creation date: 7 May 2021<br>
-Update: 7 Feb 2024<br><br>
+Update: Feb 2024<br><br>
 
 ## Here are some information and tips that you can use before working with the annotation files
 ## Downloading the annotation files
