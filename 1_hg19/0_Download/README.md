@@ -1,7 +1,7 @@
 # Downloading annotation files related to hg19 genome assembly from public databases
 Created by: Yazdan Asgari<br>
 Creation date: 7 May 2021<br>
-Update: 7 Feb 2024<br><br>
+Update: Feb 2024<br><br>
 
 **NOTE:** You could find all downloaded annotation files (explained in this section) in the **"2_Gene_annotation"** folder on the server.
 
